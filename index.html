@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Abhinay 🤍</title>
+
+<style>
+
+body{
+margin:0;
+font-family: Arial;
+text-align:center;
+background: linear-gradient(to bottom,#1e1e2f,#3a3a5f);
+color:white;
+}
+
+.page{
+display:none;
+padding:40px;
+max-width:700px;
+margin:auto;
+}
+
+.active{
+display:block;
+}
+
+button{
+margin-top:30px;
+padding:12px 20px;
+border:none;
+border-radius:10px;
+background:#ff7aa2;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff4f85;
+}
+
+img{
+width:280px;
+border-radius:15px;
+margin-top:20px;
+box-shadow:0 0 20px rgba(255,255,255,0.3);
+}
+
+/* floating hearts */
+.heart{
+position:absolute;
+color:#ff7aa2;
+font-size:20px;
+animation: float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(100vh);opacity:1;}
+100%{transform:translateY(-10vh);opacity:0;}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+
+<h1>For Abhinay 🤍</h1>
+
+<p>
+I know the last few days have been really heavy for you.
+Losing someone so important leaves a silence
+that words can't easily fill.
+</p>
+
+<p>
+But I want you to know something very simple and very real…
+<strong>I am here for you.</strong>
+</p>
+
+<p>
+Not just today.
+Not just when things feel okay.
+But even on the quiet days when everything feels overwhelming.
+</p>
+
+<p>
+You don't have to go through anything alone.
+I care about you a lot, Abhinay.
+And I love you. 🤍
+</p>
+
+<button onclick="nextPage(2)">Something special for you</button>
+
+</div>
+
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+
+<h2>Your Grandfather Is Always With You</h2>
+
+<img src="grandfather.jpg">
+
+<p>
+Some people leave the world,
+but they never leave our lives.
+</p>
+
+<p>
+Your grandfather is watching you from the sky,
+smiling proudly at the person you are becoming.
+</p>
+
+<p>
+His blessings will always stay with you
+guiding you quietly through life.
+</p>
+
+<button onclick="nextPage(3)">One more thing</button>
+
+</div>
+
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+
+<h2>You 🤍</h2>
+
+<img src="abhinay.jpg">
+
+<p>
+I just wanted to tell you something honest…
+You are one of the kindest and strongest people I know.
+</p>
+
+<p>
+Even when life becomes difficult,
+you still carry yourself with so much strength.
+</p>
+
+<p>
+And yes… I have to say it —
+you look really cute too. 🙂
+</p>
+
+<p>
+No matter what happens,
+I'm still here beside you,
+supporting you and caring about you.
+</p>
+
+<p>
+Always. 🤍
+</p>
+
+</div>
+
+
+<script>
+
+function nextPage(page){
+document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+document.getElementById("page"+page).classList.add("active");
+}
+
+/* hearts animation */
+for(let i=0;i<25;i++){
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤";
+heart.style.left=Math.random()*100+"%";
+heart.style.animationDuration=(4+Math.random()*4)+"s";
+heart.style.fontSize=(15+Math.random()*25)+"px";
+document.body.appendChild(heart);
+}
+
+</style>
+  </body>
+  </html>
